@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+        function montain() {
+            const MOUNTAINS = [{
+                name: "Kilimanjaro",
+                height: 5895,
+                place: "Tanzania"
+            }, {
+                name: "Everest",
+                height: 8848,
+                place: "Nepal"
+            }, {
+                name: "Mount Fuji",
+                height: 3776,
+                place: "Japan"
+            }, {
+                name: "Vaalserberg",
+                height: 323,
+                place: "Netherlands"
+            }, {
+                name: "Denali",
+                height: 6168,
+                place: "United States"
+            }, {
+                name: "Popocatepetl",
+                height: 5465,
+                place: "Mexico"
+            }, {
+                name: "Mont Blanc",
+                height: 4808,
+                place: "Italy/France"
+            }];
+
+            for (let index = 0; index < MOUNTAINS.length; index++) {
+                let tr = document.createElement("tr");
+
+                let tdName = document.createElement("td");
+                let tdHeight = document.createElement("td");
+                let tdPlace = document.createElement("td");
+
+                let name = document.createTextNode(MOUNTAINS[index].name);
+                tdName.appendChild(name);
+                let height = document.createTextNode(MOUNTAINS[index].height);
+                tdHeight.appendChild(height);
+                let place = document.createTextNode(MOUNTAINS[index].place);
+                tdPlace.appendChild(place);
+
+                tr.appendChild(tdName);
+                tr.appendChild(tdHeight);
+                tr.appendChild(tdPlace);
+                document.getElementById("mountains").appendChild(tr);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Mountains</h1>
+    <div>
+        <table id="mountains">
+            <tr>
+                <th>name</th>
+                <th>height</th>
+                <th>place</th>
+            </tr>
+        </table>
+    </div>
+    <button onclick="montain()">new</button>
+</body>
+
+</html>
