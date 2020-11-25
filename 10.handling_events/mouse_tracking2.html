@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+        window.addEventListener("mousedown", (click) => {
+            let sign0 = document.createTextNode("*");
+            let sign1 = document.createTextNode("#");
+            let sign2 = document.createTextNode("$");
+            node = document.createElement("div");
+
+            if (click.button == 0) node.appendChild(sign0);
+            else if (click.button == 1) node.appendChild(sign1);
+            else if (click.button == 2) node.appendChild(sign2);
+
+            window.addEventListener("mousemove", (click) => {
+                node.style.position = "absolute";
+                node.style.left = click.clientX + "px";
+                node.style.top = click.clientY + "px";
+                document.body.appendChild(node);
+            });
+        });
+    </script>
+</head>
+
+<body></body>
+
+</html>

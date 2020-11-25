@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("keydown", (a) => {
+            if (a.key === "ArrowUp") {
+                document.getElementById("ballon").style.fontSize = "150px";
+            } else if (a.key === "ArrowDown") {
+                document.getElementById("ballon").style.fontSize = "50px";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p id="ballon">🎈</p>
+</body>
+
+</html>
